@@ -4,9 +4,12 @@
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
+    --accent-color: #e74c3c;
     --text-color: #333;
     --background-color: #ecf0f1;
     --transition-speed: 0.3s;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --hover-transform: translateY(-5px);
 }
 
 /* Basic Reset */
@@ -24,17 +27,40 @@ body {
     transition: background-color var(--transition-speed);
 }
 
-/* Navigation Styles with Flexbox */
-nav {
+/* Header and Navigation Styles */
+header {
     background-color: var(--primary-color);
-    padding: 1rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    color: white;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav {
+    flex: 1;
+    max-width: 600px;
+    margin-left: 2rem;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     list-style: none;
     gap: 2rem;
+    margin: 0;
 }
 
 nav a {
@@ -42,42 +68,138 @@ nav a {
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    transition: background-color var(--transition-speed);
+    transition: all var(--transition-speed);
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width var(--transition-speed);
+}
+
+nav a:hover::after,
+nav a.active::after {
+    width: 100%;
 }
 
 nav a:hover {
-    background-color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Flexbox Cards */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.3) 100%);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    position: relative;
+}
+
+.primary-btn, .secondary-btn {
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform var(--transition-speed);
+}
+
+.primary-btn {
+    background-color: var(--accent-color);
+    border: none;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.primary-btn:hover, .secondary-btn:hover {
+    transform: var(--hover-transform);
+}
+
+/* Flexbox Cards and Progress Bars */
 .flex-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 2rem;
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
     flex: 1;
-    min-width: 250px;
+    min-width: 280px;
     padding: 2rem;
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform var(--transition-speed);
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+    transition: all var(--transition-speed);
+    text-align: center;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: var(--hover-transform);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+    transition: width 1s ease-in-out;
+    border-radius: 5px;
 }
 
 /* Form Styling */
