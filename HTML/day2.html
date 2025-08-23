@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 - HTML, CSS & JavaScript Learning</title>
+    <link rel="stylesheet" href="../CSS/day2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Welcome to Day 2</h1>
+            <p>Learning about forms, flexbox, and event handling</p>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About Us</h2>
+            <div class="flex-container">
+                <div class="card">
+                    <h3>Our Mission</h3>
+                    <p>Learning web development step by step</p>
+                </div>
+                <div class="card">
+                    <h3>Our Vision</h3>
+                    <p>Becoming a full-stack developer</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="form-section">
+            <h2>Contact Form</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+
+        <section id="contact" class="interactive-section">
+            <h2>Interactive Elements</h2>
+            <button id="themeToggle">Toggle Theme</button>
+            <div id="counter">
+                <h3>Counter: <span id="count">0</span></h3>
+                <button id="increment">Increment</button>
+                <button id="decrement">Decrement</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Web Development Learning Journey - Day 2</p>
+    </footer>
+
+    <script src="../JS/day2.js"></script>
+</body>
+</html>
