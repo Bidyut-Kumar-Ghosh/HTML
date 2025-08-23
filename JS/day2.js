@@ -2,6 +2,14 @@
 
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize progress bars with animation
+    animateProgressBars();
+    
+    // Handle active navigation state
+    handleNavigation();
+    
+    // Animate elements on scroll
+    window.addEventListener('scroll', handleScroll);
     // Form handling
     const contactForm = document.getElementById('contactForm');
     
@@ -106,6 +114,77 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Console welcome message
-    console.log('%cWelcome to Day 2 of JavaScript Learning!', 'color: #3498db; font-size: 20px; font-weight: bold;');
+    // Progress bars animation
+    function animateProgressBars() {
+        const progressBars = document.querySelectorAll('.progress');
+        progressBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 500);
+        });
+    }
+
+    // Handle navigation active state
+    function handleNavigation() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    }
+
+    // Scroll animation for elements
+    function handleScroll() {
+        const elements = document.querySelectorAll('.card, .form-group, .hero h1, .hero-text');
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementBottom = element.getBoundingClientRect().bottom;
+            const windowHeight = window.innerHeight;
+
+            if (elementTop < windowHeight * 0.8 && elementBottom > 0) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    }
+
+    // Scroll to section function
+    window.scrollToSection = function(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({
+            behavior: 'smooth'
+        });
+    };
+
+    // Add scroll reveal animations
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.5s ease-in-out';
+        card.style.transitionDelay = `${index * 0.2}s`;
+    });
+
+    // Initial scroll check
+    handleScroll();
+
+    // Console welcome message with styling
+    console.log('%cWelcome to Day 2 of JavaScript Learning! 🚀', 
+        'color: #3498db; font-size: 20px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.2);');
 });
