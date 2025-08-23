@@ -8,32 +8,55 @@
 </head>
 <body>
     <header>
+        <div class="logo">
+            <h2>🎯 Web Dev Journey</h2>
+        </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="home" class="hero">
-            <h1>Welcome to Day 2</h1>
-            <p>Learning about forms, flexbox, and event handling</p>
+            <h1>Welcome to Day 2 of Learning</h1>
+            <p class="hero-text">Exploring the world of web development with HTML, CSS, and JavaScript</p>
+            <div class="cta-buttons">
+                <button class="primary-btn" onclick="scrollToSection('about')">Learn More</button>
+                <button class="secondary-btn" onclick="scrollToSection('contact')">Get Started</button>
+            </div>
         </section>
 
         <section id="about" class="about-section">
-            <h2>About Us</h2>
+            <h2>Learning Progress</h2>
             <div class="flex-container">
                 <div class="card">
-                    <h3>Our Mission</h3>
-                    <p>Learning web development step by step</p>
+                    <span class="icon">📚</span>
+                    <h3>HTML Skills</h3>
+                    <p>Learning semantic HTML and structure</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
                 </div>
                 <div class="card">
-                    <h3>Our Vision</h3>
-                    <p>Becoming a full-stack developer</p>
+                    <span class="icon">🎨</span>
+                    <h3>CSS Skills</h3>
+                    <p>Mastering styles and layouts</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="icon">⚡</span>
+                    <h3>JavaScript Skills</h3>
+                    <p>Building interactive features</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 45%"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -69,7 +92,28 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Web Development Learning Journey - Day 2</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Me</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">📱</a>
+                    <a href="#" class="social-icon">💼</a>
+                    <a href="#" class="social-icon">📫</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2025 Web Development Learning Journey - Day 2</p>
+                <p class="footer-note">Built with 💖 while learning</p>
+            </div>
+        </div>
     </footer>
 
     <script src="../JS/day2.js"></script>
