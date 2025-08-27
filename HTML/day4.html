@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4 - Professional Web Development</title>
+    <link rel="stylesheet" href="../CSS/day4.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>💻 Pro Web Dev</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-controls">
+            <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+            <button id="menuToggle" class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Professional Web Development</h1>
+                <p class="hero-text">Day 4 of our journey into creating stunning, interactive web experiences</p>
+                <div class="cta-buttons">
+                    <button class="primary-btn" onclick="scrollToSection('projects')">View Projects</button>
+                    <button class="secondary-btn" onclick="scrollToSection('contact')">Hire Me</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">👨‍💻</div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="image-placeholder">🛒</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A fully responsive online store with cart functionality</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="image-placeholder">📱</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Social Media App</h3>
+                        <p>Interactive social platform with real-time updates</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="image-placeholder">🎮</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Interactive Game</h3>
+                        <p>Browser-based game with advanced animations</p>
+                        <div class="project-tags">
+                            <span class="tag">Canvas</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Play Game</a>
+                            <a href="#" class="project-link">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2>Professional Skills</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>HTML/CSS</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>React</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h3>Backend</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Node.js</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Express</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>MongoDB</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-percent="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials-section">
+            <h2>Client Testimonials</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-container">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <p>"An exceptional developer who delivered beyond our expectations. The website is not only beautiful but also performs incredibly well."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍💼</div>
+                            <div class="author-info">
+                                <h4>John Smith</h4>
+                                <p>CEO, Tech Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"Working with this developer was a pleasure. They understood our requirements perfectly and delivered a product that exceeded our expectations."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👩‍💼</div>
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Marketing Director, Creative Agency</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>"The attention to detail and technical expertise demonstrated throughout our project was impressive. I highly recommend their services."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍🦱</div>
+                            <div class="author-info">
+                                <h4>Michael Brown</h4>
+                                <p>Founder, Startup Innovations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn prev" id="prevTestimonial">❮</button>
+                    <div class="testimonial-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                    <button class="testimonial-btn next" id="nextTestimonial">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                            <div class="input-validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                            <div class="input-validation"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required>
+                        <div class="input-validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                        <div class="input-validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="consent" required>
+                            <label for="consent">I agree to be contacted regarding my inquiry</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-card">
+                        <span class="info-icon">📍</span>
+                        <h3>Location</h3>
+                        <p>123 Web Dev Street, Coding City</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">📧</span>
+                        <h3>Email</h3>
+                        <p>contact@prowebdev.com</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="info-icon">📱</span>
+                        <h3>Phone</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Social Media</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">👥</a>
+                    <a href="#" class="social-icon">📱</a>
+                    <a href="#" class="social-icon">💼</a>
+                    <a href="#" class="social-icon">📸</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Professional Web Development - Day 4</p>
+            <p class="footer-note">Created with 💻 while mastering web development</p>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification"></div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="../JS/day4.js"></script>
+</body>
+</html>
